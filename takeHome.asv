@@ -1,7 +1,12 @@
-%% 
 %{
- Exercise 2 - Part 1
+ Exercise 2 
   - Discuss the (in)stability of the system. Make one or more plots
+  - Build a P controller around the transfer function to stabilize the
+    system.
+        (a) First discuss which values you consider by using the root locus
+            plot and the Bode plot .
+        (b) Pick one value and convince us why you have chosen that par-
+            ticular value for K.
 %}
 
 % First, we define the TF
@@ -22,13 +27,13 @@ grid on
 
 % Step Response
 subplot(2,2,3)
-step(sys, 1); 
+step(sys, 1.75); 
 title('Step Response')
 grid on
 
 % Impulse Response 
 subplot(2,2,4)
-impulse(sys, 1); 
+impulse(sys, 1.75); 
 title('Impulse Response')
 grid on
 
@@ -38,13 +43,3 @@ bode(sys);
 title('Bode Plot')
 grid on
 
-%%
-%{
- Exercise 2 - Part 2
-  - Build a P controller around the transfer function to stabilize the
-    system.
-        (a) First discuss which values you consider by using the root locus
-            plot and the Bode plot .
-        (b) Pick one value and convince us why you have chosen that par-
-            ticular value for K.
-%}
